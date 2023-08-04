@@ -1,0 +1,22 @@
+{
+    "name": "simplydi/simplymarkdown",
+    "description": "A very simple way to handle Markdown content on your website",
+    "require": {
+        "league/commonmark": "^2.4",
+        "symfony/yaml": "^6.3",
+        "nette/utils": "^4.0",
+        "league/html-to-markdown": "^5.1"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "SimplyDi\\SimplyMarkdown\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bharat Kumar",
+            "email": "naman97034@gmail.com"
+        }
+    ]
+}
