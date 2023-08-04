@@ -60,3 +60,21 @@ This is the body content of the blog post.
 ```
 
 A you can see, you get an array of meta data you passed as Yaml in the markdown file as well as the content you wrote.
+
+## Converting Html to Markdown
+
+Simply use the `HtmlToMd()` class's `convert()` method:
+
+```php
+
+$string = "<h1>Heading 1 Here</h1>";
+
+$md = (new \SimplyDi\SimplyMarkdown\HtmlToMd)->convert($string);
+
+echo $md;
+
+// OUTPUT:
+
+# Heading 1 Here
+
+```
