@@ -12,14 +12,17 @@ use Nette\Utils\Finder;
 class MdParser
 {
 
+    private $commonMark;
+
     /**
      * @param CommonMark $commonMark
      */
     public function __construct(
-        protected string $path,
-        protected CommonMark $commonMark
+        private string $path
     )
     {
+        $this->path = rtrim($path, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR;
+        $this->commonMark = new CommonMark();
     }
 
     /**

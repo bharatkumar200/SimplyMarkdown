@@ -21,3 +21,42 @@ slug: sample-post
 This is the body content of the blog post.
 
 ```
+
+_using the parser in your app_:
+
+```php
+<?php
+
+use SimplyDi\SimplyMarkdown\MdParser;
+
+require_once '../vendor/autoload.php';
+
+$parser = new MdParser(
+    __DIR__ . '/md/'
+);
+
+$output = $parser->getFileContent("sample-post");
+
+echo "<pre>";
+print_r($output);
+```
+
+**Output**:
+
+```html
+Array
+(
+    [title] => This is a sample title
+    [description] => This is a description
+    [cover_image] => /path/to/image.png
+    [slug] => sample-post
+    [content] => 
+
+This is the body content of the blog post.
+
+
+)
+
+```
+
+A you can see, you get an array of meta data you passed as Yaml in the markdown file as well as the content you wrote.
